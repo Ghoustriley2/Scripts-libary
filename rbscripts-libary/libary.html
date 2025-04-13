@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Библиотека скриптов</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+      font-family: Consolas, monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .script-box {
+      background-color: #111;
+      border: 1px solid #00ff88;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #00ff88;
+      color: #000;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    nav {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #00ff88;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>Библиотека скриптов</header>
+  <nav>
+    <a href="home.html">Главная</a>
+    <a href="libary.html">Библиотека</a>
+  </nav>
+
+  <div class="script-box">
+    <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    <code>
+      console.log("Пример скрипта 1");
+    </code>
+  </div>
+
+  <script>
+    function copyToClipboard(button) {
+      const code = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code);
+      button.textContent = 'Скопировано!';
+      setTimeout(() => button.textContent = 'Копировать', 1500);
+    }
+  </script>
+</body>
+</html>
