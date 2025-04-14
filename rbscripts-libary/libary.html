@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Библиотека скриптов</title>
   <style>
     body {
-      background-color: #0a0a0a;
-      color: #f0f0f0;
-      font-family: Consolas, monospace;
+      background-color: #000000;
+      color: #00ffff;
+      font-family: monospace;
       margin: 0;
       padding: 20px;
     }
@@ -18,35 +19,60 @@
       text-align: center;
     }
 
+    nav {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      border: 2px solid, #00ffff;
+      border-width: 2px;
+      border-radius: 5px;
+    }
+
+    nav a {
+      color: #ff00ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 20px;
+      color: transparnt;
+    }
+
     .script-box {
       background-color: #111;
       border: 1px solid #00ff88;
       padding: 15px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-radius: 8px;
-      position: relative;
+    }
+
+    .script-box p {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #00ffff;
+    }
+
+    code {
+      display: block;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .copy-btn-container {
+      text-align: center;
+      margin-top: 15px;
     }
 
     .copy-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+      padding: 10px 30px;
+      font-size: 18px;
       background: #00ff88;
       color: #000;
       border: none;
-      padding: 5px 10px;
       cursor: pointer;
-    }
-
-    nav {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #00ff88;
-      margin: 0 15px;
-      text-decoration: none;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -54,19 +80,41 @@
   <header>Библиотека скриптов</header>
   <nav>
     <a href="home.html">Главная</a>
-    <a href="libary.html">Библиотека</a>
   </nav>
 
   <div class="script-box">
-    <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    <p><strong>Описание:</strong> Скрипт для Murder Mystery 2 от OminousVibes.</p>
     <code>
-      console.log("Пример скрипта 1");
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/Murder Mystery 2.lua"))()
     </code>
+    <div class="copy-btn-container">
+      <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    </div>
+  </div>
+
+  <div class="script-box">
+    <p><strong>Описание:</strong> Universal Admin — мощный админ-скрипт Infinite Yield.</p>
+    <code>
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    </code>
+    <div class="copy-btn-container">
+      <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    </div>
+  </div>
+
+  <div class="script-box">
+    <p><strong>Описание:</strong> Новый простой скрипт для Dead Rails с функциями: авто сбор мешков, авто инструменты, визуал и многое другое.</p>
+    <code>
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
+    </code>
+    <div class="copy-btn-container">
+      <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    </div>
   </div>
 
   <script>
     function copyToClipboard(button) {
-      const code = button.nextElementSibling.innerText;
+      const code = button.closest('.script-box').querySelector('code').innerText;
       navigator.clipboard.writeText(code);
       button.textContent = 'Скопировано!';
       setTimeout(() => button.textContent = 'Копировать', 1500);
