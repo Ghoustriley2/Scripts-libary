@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Библиотека скриптов</title>
+  <link rel="stylesheet" href="H2-STYLE.css">
+</head>
+<body>
+  <header>Библиотека скриптов</header>
+  
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+  </button>
+
+  <div id="menu">
+    <a href="H1.html">Главная</a>
+  </div>
+
+  <div class="script-box">
+    <p><strong>Описание:</strong> Скрипт для Murder Mystery 2 от OminousVibes.</p>
+    <code>
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/Murder Mystery 2.lua"))()
+    </code>
+    <div class="copy-btn-container">
+      <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    </div>
+  </div>
+
+  <div class="script-box">
+    <p><strong>Описание:</strong> Universal Admin — мощный админ-скрипт Infinite Yield.</p>
+    <code>
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    </code>
+    <div class="copy-btn-container">
+      <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    </div>
+  </div>
+
+  <div class="script-box">
+    <p><strong>Описание:</strong> Новый скрипт для Dead Rails от infernusScripts: авто сбор, визуал и другое.</p>
+    <code>
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
+    </code>
+    <div class="copy-btn-container">
+      <button class="copy-btn" onclick="copyToClipboard(this)">Копировать</button>
+    </div>
+  </div>
+
+  <script src="H2-SCRIPT.js"></script>
+</body>
+</html>
