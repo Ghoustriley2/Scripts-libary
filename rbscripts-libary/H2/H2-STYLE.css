@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Minecraft';
-  src: url('/storage/emulated/0/projects/project-G.H.O.U.S.T-1.0/file-release/H2/file-parsing/fonts/Minecraft.ttf') format('truetype');
+  src: url('./rbscripts-libary/H2/fonts/Minecraft.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Minecraft-regular';
-  src: url('/storage/emulated/0/projects/project-G.H.O.U.S.T-1.0/file-release/H2/file-parsing/fonts/minecraft-regular.ttf') format('truetype');
+  src: url('./rbscripts-libary/H2/fonts/Minecraft-regular.ttf') format('truetype');
 }
 
 #menu.revealing {
