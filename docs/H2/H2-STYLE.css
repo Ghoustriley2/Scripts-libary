@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Minecraft';
-  src: url('./Scripts-libary/docs/H2/fonts/Minecraft.ttf') format('truetype');
+  src: url('./fonts/Minecraft.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Minecraft-regular';
-  src: url('./Scripts-libary/docs/H2/fonts/minecraft-regular.ttf') format('truetype');
+  src: url('./fonts/Minecraft-regular.ttf') format('truetype');
 }
 
 #menu.revealing {
