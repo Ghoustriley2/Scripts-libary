@@ -40,3 +40,10 @@ document.addEventListener('touchmove', (e) => {
     startX = null;
   }
 });
+
+setTimeout(() => {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    preloader.style.display = "none";
+  }
+}, 5000);
