@@ -3,7 +3,7 @@
   const kievOffset = 3 * 60; // UTC+3
   const localOffset = now.getTimezoneOffset();
   const kievTime = new Date(now.getTime() + (kievOffset + localOffset) * 60000);
-  const hour = kievTime.getHours();
+  const hour = 3;
 
   if (hour === 3) {
     document.body.classList.add('witching-mode');
